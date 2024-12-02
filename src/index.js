@@ -11,7 +11,7 @@ require("dotenv").config();
 app.use(
   cors({
     origin: process.env.NODE_ENV === "production"
-      ? ["https://back-po5lc1urv-emapauls-projects.vercel.app/api/getTaskAll"]
+      ? ["https://back-task-parte1.vercel.app/api/getTaskAll","https://back-task-parte1.vercel.app"]
       : "http://localhost:3000",
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE"],

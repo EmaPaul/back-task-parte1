@@ -126,7 +126,7 @@ router.delete("/deleteTask/:id", async (req, res) => {
 router.use((req, res, next) => {
     res.setHeader(
         "Content-Security-Policy",
-        "default-src 'self'; connect-src 'self' http://localhost:3000 https://back-po5lc1urv-emapauls-projects.vercel.app/api/getTaskAll';"
+        "default-src 'self'; connect-src 'self' http://localhost:3000 https://back-po5lc1urv-emapauls-projects.vercel.app/api/getTaskAll https://back-task-parte1.vercel.app';"
     );
     next();
 });
