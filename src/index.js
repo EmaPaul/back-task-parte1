@@ -10,9 +10,7 @@ require("dotenv").config();
 // Middlewares
 app.use(
   cors({
-    origin: process.env.NODE_ENV === "production"
-      ? ["https://back-task-parte1.vercel.app/api/getTaskAll","https://back-task-parte1.vercel.app"]
-      : "http://localhost:3000",
+    origin:["https://back-task-parte1.vercel.app/api/getTaskAll","https://back-task-parte1.vercel.app","http://localhost:3000"],
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
@@ -32,10 +30,8 @@ app.listen(app.get("port"), () => {
 // MongoDB Connection
 mongoose.set("strictQuery", false);
 
-const mongoURI =
-  process.env.NODE_ENV === "production"
-    ? process.env.MONGODB_URI_PROD
-    : process.env.MONGODB_URI_DEV;
+const mongoURI =process.env.MONGODB_URI_PROD
+
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
