@@ -10,7 +10,7 @@ require("dotenv").config();
 // Middlewares
 app.use(
   cors({
-    origin:["https://back-task-parte1.vercel.app/api/getTaskAll","https://back-task-parte1.vercel.app","http://localhost:3000","https://front-part-1-j3az6ff6r-emapauls-projects.vercel.app"],
+    origin:["https://back-task-parte1.vercel.app/api/getTaskAll","https://back-task-parte1.vercel.app","http://localhost:3000","https://front-part-1-j3az6ff6r-emapauls-projects.vercel.app","https://front-part-1.vercel.app"],
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
